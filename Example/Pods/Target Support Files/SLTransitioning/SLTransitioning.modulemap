@@ -1,0 +1,6 @@
+framework module SLTransitioning {
+  umbrella header "SLTransitioning-umbrella.h"
+
+  export *
+  module * { export * }
+}

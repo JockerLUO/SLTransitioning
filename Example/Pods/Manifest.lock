@@ -1,0 +1,16 @@
+PODS:
+  - SLTransitioning (0.1.0)
+
+DEPENDENCIES:
+  - SLTransitioning (from `../`)
+
+EXTERNAL SOURCES:
+  SLTransitioning:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SLTransitioning: 0afd146822ba69f10fbd0a30796d51b5529197ad
+
+PODFILE CHECKSUM: 0d8e927fc79b016d92987943c6bf05899411d667
+
+COCOAPODS: 1.9.1
