@@ -34,9 +34,9 @@
 - (void)sl_registerPushTransition:( UIViewController * _Nullable (^)(SLPanDirectionType direction))directionBlock
                        completion:(void (^)(BOOL flag))completion {
     [self.sl_transitionAnimator.pushInteractiveTransition addPanGestureForViewController:self];
-    self.sl_transitionAnimator.pushInteractiveTransition.model.interactiveCompletion = completion;
+    self.sl_transitionAnimator.pushInteractiveTransition.callback.interactiveCompletion = completion;
     __weak typeof(self) wSelf = self;
-    self.sl_transitionAnimator.pushInteractiveTransition.model.transitionDirectionBlock = ^BOOL(SLPanDirectionType direction) {
+    self.sl_transitionAnimator.pushInteractiveTransition.callback.transitionDirectionBlock = ^BOOL(SLPanDirectionType direction) {
         __strong typeof(wSelf) self = wSelf;
         BOOL res = NO;
         UIViewController *vc = directionBlock(direction);
@@ -57,9 +57,9 @@
 - (void)sl_registerPopTransition:(BOOL (^)(SLPanDirectionType direction))directionBlock
                       completion:(void (^)(BOOL flag))completion {
     [self.sl_transitionAnimator.popInteractiveTransition addPanGestureForViewController:self];
-    self.sl_transitionAnimator.popInteractiveTransition.model.interactiveCompletion = completion;
+    self.sl_transitionAnimator.popInteractiveTransition.callback.interactiveCompletion = completion;
     __weak typeof(self) wSelf = self;
-    self.sl_transitionAnimator.popInteractiveTransition.model.transitionDirectionBlock = ^BOOL(SLPanDirectionType direction) {
+    self.sl_transitionAnimator.popInteractiveTransition.callback.transitionDirectionBlock = ^BOOL(SLPanDirectionType direction) {
         __strong typeof(wSelf) self = wSelf;
         BOOL res = directionBlock(direction);
         if (res) {

@@ -17,6 +17,19 @@
 
 @implementation SLPopViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.transitionAnimator = [SLTransitionAnimator new];
+        SLInteractiveTransitionModel *model = self.transitionAnimator.popInteractiveTransition.model;
+        model.disablePanGesture = YES;
+        model.maskAnimted = YES;
+        model.maskAnimtedScale = -1;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @(self.sourceDirection).stringValue;
@@ -49,9 +62,6 @@
     self.popBtn.center = self.view.center;
     self.popBtn.backgroundColor = UIColor.orangeColor;
     [self.popBtn addTarget:self action:@selector(popAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.transitionAnimator = [SLTransitionAnimator new];
-    self.transitionAnimator.popInteractiveTransition.model.disablePanGesture = YES;
-    self.transitionAnimator.popInteractiveTransition.model.animatedDirection = self.popDirection;
     
     __weak typeof(self) wSelf = self;
     [self sl_registerPopTransition:^BOOL(SLPanDirectionType popDirection) {
@@ -62,32 +72,6 @@
         }
         return res;
     } completion:nil];
-    
-    SLInteractiveTransitionModel *model = self.sl_transitionAnimator.popInteractiveTransition.model;
-    __block UIView *maskView = [UIView new];
-    maskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    model.interactiveBegin = ^(id<UIViewControllerContextTransitioning>  _Nonnull transitionContext) {
-        __strong typeof(wSelf) self = wSelf;
-        UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-        [toView addSubview:maskView];
-        maskView.frame = CGRectMake(0, 0, toView.sl_width, toView.sl_height);
-        UIView *tabBarSnapshot = self.sl_transitionAnimator.popInteractiveTransition.tabBarSnapshot;
-        if (tabBarSnapshot && tabBarSnapshot.sl_bottom > maskView.sl_height) {
-            maskView.sl_height = tabBarSnapshot.sl_bottom;
-        }
-    };
-    model.interactiveChange = ^(id<UIViewControllerContextTransitioning>  _Nonnull transitionContext, CGFloat percent) {
-        maskView.alpha = (1 - percent);
-    };
-    model.interactiveEnd = ^(id<UIViewControllerContextTransitioning>  _Nonnull transitionContext) {
-        maskView.alpha = 0;
-    };
-    model.interactiveCancel = ^(id<UIViewControllerContextTransitioning>  _Nonnull transitionContext) {
-        maskView.alpha = 1;
-    };
-    model.interactiveCompletion = ^(BOOL flag) {
-        [maskView removeFromSuperview];
-    };
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -100,6 +84,7 @@
     if (self.popDirection != SLPanDirectionTypeUnknow) {
         self.transitioningDelegate = self.transitionAnimator;
         self.navigationController.delegate = self.transitionAnimator;
+        self.transitionAnimator.popInteractiveTransition.model.animatedDirection = self.popDirection;
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

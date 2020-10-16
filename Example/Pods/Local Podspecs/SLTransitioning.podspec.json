@@ -1,8 +1,7 @@
 {
   "name": "SLTransitioning",
   "version": "0.1.0",
-  "summary": "A short description of SLTransitioning.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "push pop interactive transition",
   "homepage": "https://github.com/JockerLUO/SLTransitioning.git",
   "license": {
     "type": "MIT",

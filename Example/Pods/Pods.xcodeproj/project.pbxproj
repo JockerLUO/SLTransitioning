@@ -7,36 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5EFD296579F3BDD7879CCCF2D066D0 /* SLPopInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 857C43BA036FA83D083FA74DBAA12453 /* SLPopInteractiveTransition.m */; };
-		0B160CD54159F2EE3D97E0B423E35271 /* SLInteractiveTransitionModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D972AC07F4ACBECC1080F743D716806F /* SLInteractiveTransitionModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D221E47EFDE9E32168F5EB7ADCE845E /* SLPushInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 63593C4C9C3543086409B9CBF2DB1F8F /* SLPushInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16FD0A23ED1ECF59A2E5D0538A4B0134 /* UIViewController+SLTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC12271C5598561F605F689593523CB /* UIViewController+SLTransitioning.m */; };
-		52EEE50FFCD88A16E418AA2F57DDF0BF /* UIViewController+SLTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D2A98247B4FDF34E8BD7E92251B044D /* UIViewController+SLTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7082F3C47FBD23AA0A3B1375033FEE76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		82931BA87EFCBC812FDF8AF2B7CF49B3 /* SLPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E0BC658B8484E82FE3778847AEBCC /* SLPushTransition.m */; };
+		00297BA89B7865FD4474F5F049637ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		015E16281040154EF7ED5B8114F87661 /* SLTransitioning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7B54EC9243521E16562480F9831FC /* SLTransitioning-dummy.m */; };
+		0649DD30DCC305F0193D9F66DFB31E15 /* SLInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 7235BB0FAF7B3BA1AF48BAAB06BF3EF7 /* SLInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		107A95DCDE18B9750C1075C2AFAB83F0 /* SLAnimationCallbackModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D296092EC872C7348C97CE10178E478 /* SLAnimationCallbackModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17462058E2A006981A3B21C6D42698C8 /* SLTransitioning-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9A199629E94640F976FC2CCCEFA9E4 /* SLTransitioning-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2759159807428C1747FBE8905C1CE838 /* SLTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BEFD1442F6234B0DAB76FF3886574 /* SLTransitionAnimator.m */; };
+		2A34DCA6093837ACABC7C753D2F0CBCE /* SLPanGestureControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8251E1363B6FF930FCCFBA8B4E3F1DE3 /* SLPanGestureControl.m */; };
+		3853FA878FBF535A85584A7160053C2A /* SLTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3442F365316349588CC06611C696E8C6 /* SLTransitionAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E265F692F40B073DF19F239ACC95193 /* SLInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7395B75BC5EE243C61B422A26AC711 /* SLInteractiveTransition.m */; };
+		60C2C4E157E7219E9238CB369157D906 /* SLTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F453AB849900A818FEE75FC4111D9A16 /* SLTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61B46A5D2C250211007D418BD3FD627C /* UIView+SLTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CDCBE0B2117380E2B7C02A29EA408A /* UIView+SLTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E354270AA5CF68BDF083149BECDA66A /* SLPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB23D13FCFBF49723FF3CAAA8BFFD3DC /* SLPopTransition.m */; };
 		84C8201231E9A75AF9824B2DAC49DF54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		863D52C79645F99B315562FE79A8FBC1 /* SLPushTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA1B12BED20CA0987BDDE5B04B50F7B /* SLPushTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		881FDCCBF03A57438528ACA536B3E537 /* SLInteractiveTransitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E150B9F1C02915B08244583B26195 /* SLInteractiveTransitionModel.m */; };
-		89C99B6D4E4A2CE5191F1BEE1E324120 /* SLTransitioning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD7503F5E22EE2A09103DC08935E2 /* SLTransitioning-dummy.m */; };
-		8B0C107C132C3B170B2C5AE4275785D7 /* SLPushInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 639886C8A0A466C503D4F016727F8628 /* SLPushInteractiveTransition.m */; };
+		85D241632ACB98289EA5641DB6BDAE39 /* SLPopInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9761EA642D395FCA24C38BCDDBFE38BD /* SLPopInteractiveTransition.m */; };
 		948289D5CF59CB074E7D18145FCB0BF0 /* Pods-SLTransitioning_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6971B734DC7B7B44FA947F327723EE /* Pods-SLTransitioning_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9522D3EAFA744EDCD91AA5EC915121DF /* Pods-SLTransitioning_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2303A8C6193E9679116DC504E1EE50 /* Pods-SLTransitioning_Tests-dummy.m */; };
-		A2490402A9DD282250969000D0839493 /* SLTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2AA031B932C2D3464C481E36E7CE4 /* SLTransitionAnimator.m */; };
-		A85DED05580DCB1CC6015034419D6F5C /* SLInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA7C289C96AC96DDE83A309CDAA7024 /* SLInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A956034E638BEB91F386277DEE25CC76 /* SLTransitioning-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F8D6D00A730CEF5F22740F5E7695B4 /* SLTransitioning-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97FA27CAF6A33B9EF46AF29B2E63BEC3 /* SLPushInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF6FF90CA2F5051FABD8B302702FDCD /* SLPushInteractiveTransition.m */; };
+		A22F8A0B032D3A158591E0158E76AD8F /* SLPushTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A4DCCA1FFD0AE8249A50D8616C3647 /* SLPushTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA66CC28540B071D58F29F1D05846137 /* SLPushInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CDC65BDC7B531ABD7CF9BAC1C332DC /* SLPushInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC422A11DAC2A2EA3C128C6E6928E7B3 /* SLPopTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0718701A04B898914674142930193470 /* SLPopTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46519482441090D662623A57E3884B3 /* SLInteractiveTransitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A353C2DF55F8C123FDBE477FBA0A5 /* SLInteractiveTransitionModel.m */; };
 		B5D43C492EC4AF43B34B515676CC88F1 /* Pods-SLTransitioning_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 544C04F4E69DBF877B3947853F8AEAA9 /* Pods-SLTransitioning_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7A7D2F6D851F87B6893004E4D9406DF /* SLTransitionAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7563E44D17D687F1BAE210DF8991BB2A /* SLTransitionAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF06B9C420A56EC27F2F55846E6256BA /* SLInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6A51A4625698D5D6E27FA9EB817E0 /* SLInteractiveTransition.m */; };
+		BFE359B85316AAEC9E57E1CF4EA8F25C /* SLPanGestureControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EBD2C308A8C7E041AC645D9B3F6914E /* SLPanGestureControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C070A3D4EC31BB7C3B425806F3033C69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D4BB59E035E2078649179253E7F4F4A2 /* SLPopInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 403D192853A8B41D9915007704B2C16D /* SLPopInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD011E7615444116AB774785A481D333 /* UIView+SLTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB0C2D7F46F6AF8CF21A17EA9ECE681 /* UIView+SLTransitioning.m */; };
-		DDB79ECF3B64B6A6517D667A71298F90 /* SLTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F5BCB2F6DEA2CD8628AEBF3ED6E179 /* SLTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4FD52495F8979B20A6F7C0CCF9892F5 /* UIView+SLTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = D50D712529CF58663A42D93480915F96 /* UIView+SLTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F07FF1F14AEDE9DC8864C54C3D45FE4F /* SLPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9D059032C77F1222DBE0DE1E1CDD1F /* SLPopTransition.m */; };
+		CB45D39520472E02EBA01125E3AF3CA4 /* SLAnimationCallbackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0841B13A61AF9FEB3CCA66EDEADC2445 /* SLAnimationCallbackModel.m */; };
+		CD4039CADEA5AD614D5B9AF51D15A80A /* SLInteractiveTransitionModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF1B6B711AD455DFE9F606C856A439D /* SLInteractiveTransitionModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB8D1BCDAE08B03278BFC46B0CDBA30D /* SLPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5458A86EE95FB9B73743553364624D19 /* SLPushTransition.m */; };
+		EC5689C4E754EEFA39D3B566FDD6105F /* UIView+SLTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF0FE73B7C208172FCC70E7AAD5A0F /* UIView+SLTransitioning.m */; };
+		ED04672BBEE013EA7D673D8F4E94478B /* UIViewController+SLTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A03A9E8E27DDA6823531DF03ED58F3 /* UIViewController+SLTransitioning.m */; };
+		ED7B7448871E2136E20F55461231C864 /* UIViewController+SLTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A211A4F50ACEA90FA48FE611F162117 /* UIViewController+SLTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F09FD3FE8C91044D40B68733075F69C2 /* Pods-SLTransitioning_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 573B4A0D45AA5649B1C2965F8C28711C /* Pods-SLTransitioning_Example-dummy.m */; };
-		F43370D9537029ADD7D2A0487FF8ABA1 /* SLPanGestureControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E1EF96199BEF20F556B35102CCAB1383 /* SLPanGestureControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE4354C89678B1264153CBFCCAC99DF7 /* SLPopTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9ABA3C2964A302375110766CDEC07A /* SLPopTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFE296E621C0C2D57D2BE47221D7C1EE /* SLPanGestureControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019589309600EC37C6ABD10BDE94191 /* SLPanGestureControl.m */; };
+		F6DFD4F053585F89B308DE092DDEA783 /* SLPopInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC36965D10C415F6A7F0FE3F3D942E9 /* SLPopInteractiveTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,59 +59,61 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07F8D6D00A730CEF5F22740F5E7695B4 /* SLTransitioning-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLTransitioning-umbrella.h"; sourceTree = "<group>"; };
-		1B368052D1A5FF02C5374C504E733315 /* SLTransitioning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLTransitioning.release.xcconfig; sourceTree = "<group>"; };
-		1D23202759FBB19CA6C6E58FACF19970 /* Pods_SLTransitioning_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLTransitioning_Tests.framework; path = "Pods-SLTransitioning_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0718701A04B898914674142930193470 /* SLPopTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPopTransition.h; sourceTree = "<group>"; };
+		0841B13A61AF9FEB3CCA66EDEADC2445 /* SLAnimationCallbackModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLAnimationCallbackModel.m; sourceTree = "<group>"; };
+		09CDC65BDC7B531ABD7CF9BAC1C332DC /* SLPushInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPushInteractiveTransition.h; sourceTree = "<group>"; };
+		10BF0FE73B7C208172FCC70E7AAD5A0F /* UIView+SLTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLTransitioning.m"; sourceTree = "<group>"; };
+		1D23202759FBB19CA6C6E58FACF19970 /* Pods_SLTransitioning_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLTransitioning_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2A353C2DF55F8C123FDBE477FBA0A5 /* SLInteractiveTransitionModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLInteractiveTransitionModel.m; sourceTree = "<group>"; };
 		1F909B63DAB73D4F96C8B42803456370 /* Pods-SLTransitioning_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLTransitioning_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2019589309600EC37C6ABD10BDE94191 /* SLPanGestureControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPanGestureControl.m; sourceTree = "<group>"; };
-		2CA7C289C96AC96DDE83A309CDAA7024 /* SLInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLInteractiveTransition.h; sourceTree = "<group>"; };
-		2EF2AA031B932C2D3464C481E36E7CE4 /* SLTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLTransitionAnimator.m; sourceTree = "<group>"; };
-		2F9E0BC658B8484E82FE3778847AEBCC /* SLPushTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPushTransition.m; sourceTree = "<group>"; };
+		22A03A9E8E27DDA6823531DF03ED58F3 /* UIViewController+SLTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLTransitioning.m"; sourceTree = "<group>"; };
+		2BFFC8FC2E4A887C190E2F722B065641 /* SLTransitioning-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLTransitioning-prefix.pch"; sourceTree = "<group>"; };
+		2F3ADAFB7BB11CBF334A033FF515B0DC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30A4DCCA1FFD0AE8249A50D8616C3647 /* SLPushTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPushTransition.h; sourceTree = "<group>"; };
+		30B7B54EC9243521E16562480F9831FC /* SLTransitioning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SLTransitioning-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3C9E150B9F1C02915B08244583B26195 /* SLInteractiveTransitionModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLInteractiveTransitionModel.m; sourceTree = "<group>"; };
-		403D192853A8B41D9915007704B2C16D /* SLPopInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPopInteractiveTransition.h; sourceTree = "<group>"; };
+		3442F365316349588CC06611C696E8C6 /* SLTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLTransitionAnimator.h; sourceTree = "<group>"; };
+		3D5620C48FA884DF8251B3DB6FA6479A /* SLTransitioning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLTransitioning.debug.xcconfig; sourceTree = "<group>"; };
+		45608DDBF2F611CBB910BC23CF89339E /* SLTransitioning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLTransitioning.release.xcconfig; sourceTree = "<group>"; };
 		461F6ED5FE323C4805D8023FE36D44B1 /* Pods-SLTransitioning_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLTransitioning_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4CA1B12BED20CA0987BDDE5B04B50F7B /* SLPushTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPushTransition.h; sourceTree = "<group>"; };
-		4D2A98247B4FDF34E8BD7E92251B044D /* UIViewController+SLTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLTransitioning.h"; sourceTree = "<group>"; };
 		4DE045ECB168A4A483BB53A1FD7C0110 /* Pods-SLTransitioning_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLTransitioning_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		544C04F4E69DBF877B3947853F8AEAA9 /* Pods-SLTransitioning_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLTransitioning_Tests-umbrella.h"; sourceTree = "<group>"; };
-		56A078EA3245C6A161B24DF31A2CECD5 /* Pods_SLTransitioning_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLTransitioning_Example.framework; path = "Pods-SLTransitioning_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5458A86EE95FB9B73743553364624D19 /* SLPushTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPushTransition.m; sourceTree = "<group>"; };
+		56A078EA3245C6A161B24DF31A2CECD5 /* Pods_SLTransitioning_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLTransitioning_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		573B4A0D45AA5649B1C2965F8C28711C /* Pods-SLTransitioning_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLTransitioning_Example-dummy.m"; sourceTree = "<group>"; };
-		5D4AA6E33D617086DA66E6664BACF14C /* SLTransitioning-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SLTransitioning-Info.plist"; sourceTree = "<group>"; };
-		5E9ABA3C2964A302375110766CDEC07A /* SLPopTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPopTransition.h; sourceTree = "<group>"; };
 		5F2303A8C6193E9679116DC504E1EE50 /* Pods-SLTransitioning_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLTransitioning_Tests-dummy.m"; sourceTree = "<group>"; };
-		63593C4C9C3543086409B9CBF2DB1F8F /* SLPushInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPushInteractiveTransition.h; sourceTree = "<group>"; };
-		639886C8A0A466C503D4F016727F8628 /* SLPushInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPushInteractiveTransition.m; sourceTree = "<group>"; };
+		6A211A4F50ACEA90FA48FE611F162117 /* UIViewController+SLTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLTransitioning.h"; sourceTree = "<group>"; };
 		6A6971B734DC7B7B44FA947F327723EE /* Pods-SLTransitioning_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLTransitioning_Example-umbrella.h"; sourceTree = "<group>"; };
-		73816913FFE977D811986A4D223D9CDC /* SLTransitioning.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SLTransitioning.modulemap; sourceTree = "<group>"; };
-		7563E44D17D687F1BAE210DF8991BB2A /* SLTransitionAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLTransitionAnimator.h; sourceTree = "<group>"; };
+		6AC148E770D6CC5F9502DEAF169618B7 /* SLTransitioning-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SLTransitioning-Info.plist"; sourceTree = "<group>"; };
+		7235BB0FAF7B3BA1AF48BAAB06BF3EF7 /* SLInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLInteractiveTransition.h; sourceTree = "<group>"; };
+		76CDCBE0B2117380E2B7C02A29EA408A /* UIView+SLTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+SLTransitioning.h"; sourceTree = "<group>"; };
+		7EBD2C308A8C7E041AC645D9B3F6914E /* SLPanGestureControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPanGestureControl.h; sourceTree = "<group>"; };
 		7EF1BE208F0BA4327FCB56E833AB94B2 /* Pods-SLTransitioning_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLTransitioning_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		857C43BA036FA83D083FA74DBAA12453 /* SLPopInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPopInteractiveTransition.m; sourceTree = "<group>"; };
+		8251E1363B6FF930FCCFBA8B4E3F1DE3 /* SLPanGestureControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPanGestureControl.m; sourceTree = "<group>"; };
 		88B59C3AC62516A2559F67CCA0AAD9C8 /* Pods-SLTransitioning_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLTransitioning_Tests.modulemap"; sourceTree = "<group>"; };
+		8C7395B75BC5EE243C61B422A26AC711 /* SLInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLInteractiveTransition.m; sourceTree = "<group>"; };
+		8CE9514841636EFB75C970521D794312 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		910B815380FEABB097536D66B35E4B34 /* Pods-SLTransitioning_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLTransitioning_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9456B5BAAC6987504AC70AA0BBAE7BCC /* Pods-SLTransitioning_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLTransitioning_Example-frameworks.sh"; sourceTree = "<group>"; };
-		94B868E01B99824FCB01794E27CB70BC /* SLTransitioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SLTransitioning.framework; path = SLTransitioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A73C263443D4ADD9A257CAF6ACDEA2EC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		94B868E01B99824FCB01794E27CB70BC /* SLTransitioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SLTransitioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9761EA642D395FCA24C38BCDDBFE38BD /* SLPopInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPopInteractiveTransition.m; sourceTree = "<group>"; };
+		9BF1B6B711AD455DFE9F606C856A439D /* SLInteractiveTransitionModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLInteractiveTransitionModel.h; sourceTree = "<group>"; };
+		9D296092EC872C7348C97CE10178E478 /* SLAnimationCallbackModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLAnimationCallbackModel.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0E88825232260F0620D6B4EF33B2BE7 /* SLTransitioning.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SLTransitioning.modulemap; sourceTree = "<group>"; };
 		A9EE88FA9FFB69F3C2C6F3C0DBB7CC41 /* Pods-SLTransitioning_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLTransitioning_Example-Info.plist"; sourceTree = "<group>"; };
-		AFCAD7503F5E22EE2A09103DC08935E2 /* SLTransitioning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SLTransitioning-dummy.m"; sourceTree = "<group>"; };
-		B212CC99A5B2687672744D8FAEAAC453 /* SLTransitioning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLTransitioning.debug.xcconfig; sourceTree = "<group>"; };
-		BDB0C2D7F46F6AF8CF21A17EA9ECE681 /* UIView+SLTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLTransitioning.m"; sourceTree = "<group>"; };
+		CC1BEFD1442F6234B0DAB76FF3886574 /* SLTransitionAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLTransitionAnimator.m; sourceTree = "<group>"; };
 		D0390DDFF788FEC9D90D1B1594C5600A /* Pods-SLTransitioning_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLTransitioning_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D50D712529CF58663A42D93480915F96 /* UIView+SLTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+SLTransitioning.h"; sourceTree = "<group>"; };
-		D7D6A51A4625698D5D6E27FA9EB817E0 /* SLInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLInteractiveTransition.m; sourceTree = "<group>"; };
-		D972AC07F4ACBECC1080F743D716806F /* SLInteractiveTransitionModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLInteractiveTransitionModel.h; sourceTree = "<group>"; };
-		DB9D059032C77F1222DBE0DE1E1CDD1F /* SLPopTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPopTransition.m; sourceTree = "<group>"; };
-		E1EF96199BEF20F556B35102CCAB1383 /* SLPanGestureControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPanGestureControl.h; sourceTree = "<group>"; };
-		E7F5BCB2F6DEA2CD8628AEBF3ED6E179 /* SLTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLTransitioning.h; path = SLTransitioning/Classes/SLTransitioning.h; sourceTree = "<group>"; };
-		E88AA755CEB0F29C1A45F1473754A3DF /* SLTransitioning-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLTransitioning-prefix.pch"; sourceTree = "<group>"; };
-		EBC12271C5598561F605F689593523CB /* UIViewController+SLTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLTransitioning.m"; sourceTree = "<group>"; };
+		DB23D13FCFBF49723FF3CAAA8BFFD3DC /* SLPopTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPopTransition.m; sourceTree = "<group>"; };
+		DBE29B5D00DC25E39103E06CDDCF3711 /* SLTransitioning.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SLTransitioning.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED2FCE860C8D3C51DBBF34BF65949051 /* Pods-SLTransitioning_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLTransitioning_Tests-Info.plist"; sourceTree = "<group>"; };
+		ED9A199629E94640F976FC2CCCEFA9E4 /* SLTransitioning-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLTransitioning-umbrella.h"; sourceTree = "<group>"; };
+		EDC36965D10C415F6A7F0FE3F3D942E9 /* SLPopInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SLPopInteractiveTransition.h; sourceTree = "<group>"; };
+		EDF6FF90CA2F5051FABD8B302702FDCD /* SLPushInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SLPushInteractiveTransition.m; sourceTree = "<group>"; };
 		EF711C3F4D0D6142DC5EA542D6AF6EFD /* Pods-SLTransitioning_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLTransitioning_Example.modulemap"; sourceTree = "<group>"; };
 		F0491F8CB2A13AD7183934215A44ED77 /* Pods-SLTransitioning_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLTransitioning_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F2FFA669ECA7A5C4BCEB2046197623B0 /* Pods-SLTransitioning_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLTransitioning_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F42EB874344D2FAFF1D75F259A3A6EAA /* SLTransitioning.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SLTransitioning.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F5E336EB99BEF5846A6D790C73CFD3F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F453AB849900A818FEE75FC4111D9A16 /* SLTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLTransitioning.h; path = SLTransitioning/Classes/SLTransitioning.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +133,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0D7BD4F8D776ECBFE0851BA7CB43A90 /* Frameworks */ = {
+		DF07CF425A6B526FCECC76B9071086C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7082F3C47FBD23AA0A3B1375033FEE76 /* Foundation.framework in Frameworks */,
+				00297BA89B7865FD4474F5F049637ED8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +152,21 @@
 				94B868E01B99824FCB01794E27CB70BC /* SLTransitioning.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		122572DFFE26915DC54B61EB41BFE290 /* SLTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				F453AB849900A818FEE75FC4111D9A16 /* SLTransitioning.h */,
+				27FE2250A51BCF2F42644C5CADA0E7E5 /* Pod */,
+				D9A0407B7FE6FF18E7794F8555AEBBD8 /* Pop */,
+				7B13E86E09847057AD46E2870E723922 /* Push */,
+				63129FAE9964A7F6DBBC3243025C0D11 /* Support Files */,
+				F493EF6B59F2EAB6BE29ACB5E5119829 /* Transition */,
+				B1B595D60E2151A5A56C1AD05F950BCC /* Utils */,
+			);
+			name = SLTransitioning;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		12558102407AE2669EF5FF81E0136B66 /* Pods-SLTransitioning_Example */ = {
@@ -167,12 +186,12 @@
 			path = "Target Support Files/Pods-SLTransitioning_Example";
 			sourceTree = "<group>";
 		};
-		160AD54FF2C1231849691EEFCC1BE026 /* Pod */ = {
+		27FE2250A51BCF2F42644C5CADA0E7E5 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A73C263443D4ADD9A257CAF6ACDEA2EC /* LICENSE */,
-				F5E336EB99BEF5846A6D790C73CFD3F1 /* README.md */,
-				F42EB874344D2FAFF1D75F259A3A6EAA /* SLTransitioning.podspec */,
+				8CE9514841636EFB75C970521D794312 /* LICENSE */,
+				2F3ADAFB7BB11CBF334A033FF515B0DC /* README.md */,
+				DBE29B5D00DC25E39103E06CDDCF3711 /* SLTransitioning.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -186,80 +205,49 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4070030C9532B87806510FEDBB486D95 /* Push */ = {
+		63129FAE9964A7F6DBBC3243025C0D11 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				63593C4C9C3543086409B9CBF2DB1F8F /* SLPushInteractiveTransition.h */,
-				639886C8A0A466C503D4F016727F8628 /* SLPushInteractiveTransition.m */,
-				4CA1B12BED20CA0987BDDE5B04B50F7B /* SLPushTransition.h */,
-				2F9E0BC658B8484E82FE3778847AEBCC /* SLPushTransition.m */,
-			);
-			name = Push;
-			path = SLTransitioning/Classes/Push;
-			sourceTree = "<group>";
-		};
-		6244C731C7ED3357A19854141EB0EA19 /* Transition */ = {
-			isa = PBXGroup;
-			children = (
-				2CA7C289C96AC96DDE83A309CDAA7024 /* SLInteractiveTransition.h */,
-				D7D6A51A4625698D5D6E27FA9EB817E0 /* SLInteractiveTransition.m */,
-				D972AC07F4ACBECC1080F743D716806F /* SLInteractiveTransitionModel.h */,
-				3C9E150B9F1C02915B08244583B26195 /* SLInteractiveTransitionModel.m */,
-				7563E44D17D687F1BAE210DF8991BB2A /* SLTransitionAnimator.h */,
-				2EF2AA031B932C2D3464C481E36E7CE4 /* SLTransitionAnimator.m */,
-				4D2A98247B4FDF34E8BD7E92251B044D /* UIViewController+SLTransitioning.h */,
-				EBC12271C5598561F605F689593523CB /* UIViewController+SLTransitioning.m */,
-			);
-			name = Transition;
-			path = SLTransitioning/Classes/Transition;
-			sourceTree = "<group>";
-		};
-		83E82A3B72BDC3A879E4A289FE665C65 /* Pop */ = {
-			isa = PBXGroup;
-			children = (
-				403D192853A8B41D9915007704B2C16D /* SLPopInteractiveTransition.h */,
-				857C43BA036FA83D083FA74DBAA12453 /* SLPopInteractiveTransition.m */,
-				5E9ABA3C2964A302375110766CDEC07A /* SLPopTransition.h */,
-				DB9D059032C77F1222DBE0DE1E1CDD1F /* SLPopTransition.m */,
-			);
-			name = Pop;
-			path = SLTransitioning/Classes/Pop;
-			sourceTree = "<group>";
-		};
-		A41C2A2F2E332148AD2026CF45DDCC60 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				73816913FFE977D811986A4D223D9CDC /* SLTransitioning.modulemap */,
-				AFCAD7503F5E22EE2A09103DC08935E2 /* SLTransitioning-dummy.m */,
-				5D4AA6E33D617086DA66E6664BACF14C /* SLTransitioning-Info.plist */,
-				E88AA755CEB0F29C1A45F1473754A3DF /* SLTransitioning-prefix.pch */,
-				07F8D6D00A730CEF5F22740F5E7695B4 /* SLTransitioning-umbrella.h */,
-				B212CC99A5B2687672744D8FAEAAC453 /* SLTransitioning.debug.xcconfig */,
-				1B368052D1A5FF02C5374C504E733315 /* SLTransitioning.release.xcconfig */,
+				A0E88825232260F0620D6B4EF33B2BE7 /* SLTransitioning.modulemap */,
+				30B7B54EC9243521E16562480F9831FC /* SLTransitioning-dummy.m */,
+				6AC148E770D6CC5F9502DEAF169618B7 /* SLTransitioning-Info.plist */,
+				2BFFC8FC2E4A887C190E2F722B065641 /* SLTransitioning-prefix.pch */,
+				ED9A199629E94640F976FC2CCCEFA9E4 /* SLTransitioning-umbrella.h */,
+				3D5620C48FA884DF8251B3DB6FA6479A /* SLTransitioning.debug.xcconfig */,
+				45608DDBF2F611CBB910BC23CF89339E /* SLTransitioning.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SLTransitioning";
 			sourceTree = "<group>";
 		};
-		A4876BF3F8D1F1690EE5794A10D219CC /* SLTransitioning */ = {
+		7B13E86E09847057AD46E2870E723922 /* Push */ = {
 			isa = PBXGroup;
 			children = (
-				E7F5BCB2F6DEA2CD8628AEBF3ED6E179 /* SLTransitioning.h */,
-				160AD54FF2C1231849691EEFCC1BE026 /* Pod */,
-				83E82A3B72BDC3A879E4A289FE665C65 /* Pop */,
-				4070030C9532B87806510FEDBB486D95 /* Push */,
-				A41C2A2F2E332148AD2026CF45DDCC60 /* Support Files */,
-				6244C731C7ED3357A19854141EB0EA19 /* Transition */,
-				D1143C6AEF97B5BABE2AB87599438569 /* Utils */,
+				09CDC65BDC7B531ABD7CF9BAC1C332DC /* SLPushInteractiveTransition.h */,
+				EDF6FF90CA2F5051FABD8B302702FDCD /* SLPushInteractiveTransition.m */,
+				30A4DCCA1FFD0AE8249A50D8616C3647 /* SLPushTransition.h */,
+				5458A86EE95FB9B73743553364624D19 /* SLPushTransition.m */,
 			);
-			name = SLTransitioning;
-			path = ../..;
+			name = Push;
+			path = SLTransitioning/Classes/Push;
+			sourceTree = "<group>";
+		};
+		B1B595D60E2151A5A56C1AD05F950BCC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7EBD2C308A8C7E041AC645D9B3F6914E /* SLPanGestureControl.h */,
+				8251E1363B6FF930FCCFBA8B4E3F1DE3 /* SLPanGestureControl.m */,
+				76CDCBE0B2117380E2B7C02A29EA408A /* UIView+SLTransitioning.h */,
+				10BF0FE73B7C208172FCC70E7AAD5A0F /* UIView+SLTransitioning.m */,
+			);
+			name = Utils;
+			path = SLTransitioning/Classes/Utils;
 			sourceTree = "<group>";
 		};
 		B9578E11FF13E699CE1A4D154CDC7338 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A4876BF3F8D1F1690EE5794A10D219CC /* SLTransitioning */,
+				122572DFFE26915DC54B61EB41BFE290 /* SLTransitioning */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -283,24 +271,24 @@
 			);
 			sourceTree = "<group>";
 		};
-		D1143C6AEF97B5BABE2AB87599438569 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E1EF96199BEF20F556B35102CCAB1383 /* SLPanGestureControl.h */,
-				2019589309600EC37C6ABD10BDE94191 /* SLPanGestureControl.m */,
-				D50D712529CF58663A42D93480915F96 /* UIView+SLTransitioning.h */,
-				BDB0C2D7F46F6AF8CF21A17EA9ECE681 /* UIView+SLTransitioning.m */,
-			);
-			name = Utils;
-			path = SLTransitioning/Classes/Utils;
-			sourceTree = "<group>";
-		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9A0407B7FE6FF18E7794F8555AEBBD8 /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				EDC36965D10C415F6A7F0FE3F3D942E9 /* SLPopInteractiveTransition.h */,
+				9761EA642D395FCA24C38BCDDBFE38BD /* SLPopInteractiveTransition.m */,
+				0718701A04B898914674142930193470 /* SLPopTransition.h */,
+				DB23D13FCFBF49723FF3CAAA8BFFD3DC /* SLPopTransition.m */,
+			);
+			name = Pop;
+			path = SLTransitioning/Classes/Pop;
 			sourceTree = "<group>";
 		};
 		E85BA82F197394D5E85979259BC27EAB /* Pods-SLTransitioning_Tests */ = {
@@ -319,28 +307,27 @@
 			path = "Target Support Files/Pods-SLTransitioning_Tests";
 			sourceTree = "<group>";
 		};
+		F493EF6B59F2EAB6BE29ACB5E5119829 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				9D296092EC872C7348C97CE10178E478 /* SLAnimationCallbackModel.h */,
+				0841B13A61AF9FEB3CCA66EDEADC2445 /* SLAnimationCallbackModel.m */,
+				7235BB0FAF7B3BA1AF48BAAB06BF3EF7 /* SLInteractiveTransition.h */,
+				8C7395B75BC5EE243C61B422A26AC711 /* SLInteractiveTransition.m */,
+				9BF1B6B711AD455DFE9F606C856A439D /* SLInteractiveTransitionModel.h */,
+				1E2A353C2DF55F8C123FDBE477FBA0A5 /* SLInteractiveTransitionModel.m */,
+				3442F365316349588CC06611C696E8C6 /* SLTransitionAnimator.h */,
+				CC1BEFD1442F6234B0DAB76FF3886574 /* SLTransitionAnimator.m */,
+				6A211A4F50ACEA90FA48FE611F162117 /* UIViewController+SLTransitioning.h */,
+				22A03A9E8E27DDA6823531DF03ED58F3 /* UIViewController+SLTransitioning.m */,
+			);
+			name = Transition;
+			path = SLTransitioning/Classes/Transition;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2D2FEAD6E84B4A899C2D4A1FBCE17A3F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A85DED05580DCB1CC6015034419D6F5C /* SLInteractiveTransition.h in Headers */,
-				0B160CD54159F2EE3D97E0B423E35271 /* SLInteractiveTransitionModel.h in Headers */,
-				F43370D9537029ADD7D2A0487FF8ABA1 /* SLPanGestureControl.h in Headers */,
-				D4BB59E035E2078649179253E7F4F4A2 /* SLPopInteractiveTransition.h in Headers */,
-				FE4354C89678B1264153CBFCCAC99DF7 /* SLPopTransition.h in Headers */,
-				0D221E47EFDE9E32168F5EB7ADCE845E /* SLPushInteractiveTransition.h in Headers */,
-				863D52C79645F99B315562FE79A8FBC1 /* SLPushTransition.h in Headers */,
-				B7A7D2F6D851F87B6893004E4D9406DF /* SLTransitionAnimator.h in Headers */,
-				A956034E638BEB91F386277DEE25CC76 /* SLTransitioning-umbrella.h in Headers */,
-				DDB79ECF3B64B6A6517D667A71298F90 /* SLTransitioning.h in Headers */,
-				E4FD52495F8979B20A6F7C0CCF9892F5 /* UIView+SLTransitioning.h in Headers */,
-				52EEE50FFCD88A16E418AA2F57DDF0BF /* UIViewController+SLTransitioning.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		536BFF42B5D8A9FFA6A6CFCE81B86544 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +341,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D43C492EC4AF43B34B515676CC88F1 /* Pods-SLTransitioning_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD1A006F4CCF2BD0599212097FA46461 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107A95DCDE18B9750C1075C2AFAB83F0 /* SLAnimationCallbackModel.h in Headers */,
+				0649DD30DCC305F0193D9F66DFB31E15 /* SLInteractiveTransition.h in Headers */,
+				CD4039CADEA5AD614D5B9AF51D15A80A /* SLInteractiveTransitionModel.h in Headers */,
+				BFE359B85316AAEC9E57E1CF4EA8F25C /* SLPanGestureControl.h in Headers */,
+				F6DFD4F053585F89B308DE092DDEA783 /* SLPopInteractiveTransition.h in Headers */,
+				AC422A11DAC2A2EA3C128C6E6928E7B3 /* SLPopTransition.h in Headers */,
+				AA66CC28540B071D58F29F1D05846137 /* SLPushInteractiveTransition.h in Headers */,
+				A22F8A0B032D3A158591E0158E76AD8F /* SLPushTransition.h in Headers */,
+				3853FA878FBF535A85584A7160053C2A /* SLTransitionAnimator.h in Headers */,
+				17462058E2A006981A3B21C6D42698C8 /* SLTransitioning-umbrella.h in Headers */,
+				60C2C4E157E7219E9238CB369157D906 /* SLTransitioning.h in Headers */,
+				61B46A5D2C250211007D418BD3FD627C /* UIView+SLTransitioning.h in Headers */,
+				ED7B7448871E2136E20F55461231C864 /* UIViewController+SLTransitioning.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,12 +388,12 @@
 		};
 		ACD1BF46C7836F622CFDE07BCF7BEAD3 /* SLTransitioning */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA5789E9948E3C46F20ECF47F8F5655E /* Build configuration list for PBXNativeTarget "SLTransitioning" */;
+			buildConfigurationList = F2E41DBB93EA7725BF401FB8A2793819 /* Build configuration list for PBXNativeTarget "SLTransitioning" */;
 			buildPhases = (
-				2D2FEAD6E84B4A899C2D4A1FBCE17A3F /* Headers */,
-				2825E418CCEE2A7D6BC030B0E9A5C8C6 /* Sources */,
-				E0D7BD4F8D776ECBFE0851BA7CB43A90 /* Frameworks */,
-				C9AF911FEB0A43DC889982CABBC24219 /* Resources */,
+				AD1A006F4CCF2BD0599212097FA46461 /* Headers */,
+				4DFEA5325382A9C50D5C563895A29541 /* Sources */,
+				DF07CF425A6B526FCECC76B9071086C6 /* Frameworks */,
+				DA84EDC56F9189031AEB916ADD6DA821 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -423,7 +430,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -460,7 +467,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9AF911FEB0A43DC889982CABBC24219 /* Resources */ = {
+		DA84EDC56F9189031AEB916ADD6DA821 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -470,21 +477,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2825E418CCEE2A7D6BC030B0E9A5C8C6 /* Sources */ = {
+		4DFEA5325382A9C50D5C563895A29541 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF06B9C420A56EC27F2F55846E6256BA /* SLInteractiveTransition.m in Sources */,
-				881FDCCBF03A57438528ACA536B3E537 /* SLInteractiveTransitionModel.m in Sources */,
-				FFE296E621C0C2D57D2BE47221D7C1EE /* SLPanGestureControl.m in Sources */,
-				0A5EFD296579F3BDD7879CCCF2D066D0 /* SLPopInteractiveTransition.m in Sources */,
-				F07FF1F14AEDE9DC8864C54C3D45FE4F /* SLPopTransition.m in Sources */,
-				8B0C107C132C3B170B2C5AE4275785D7 /* SLPushInteractiveTransition.m in Sources */,
-				82931BA87EFCBC812FDF8AF2B7CF49B3 /* SLPushTransition.m in Sources */,
-				A2490402A9DD282250969000D0839493 /* SLTransitionAnimator.m in Sources */,
-				89C99B6D4E4A2CE5191F1BEE1E324120 /* SLTransitioning-dummy.m in Sources */,
-				DD011E7615444116AB774785A481D333 /* UIView+SLTransitioning.m in Sources */,
-				16FD0A23ED1ECF59A2E5D0538A4B0134 /* UIViewController+SLTransitioning.m in Sources */,
+				CB45D39520472E02EBA01125E3AF3CA4 /* SLAnimationCallbackModel.m in Sources */,
+				3E265F692F40B073DF19F239ACC95193 /* SLInteractiveTransition.m in Sources */,
+				B46519482441090D662623A57E3884B3 /* SLInteractiveTransitionModel.m in Sources */,
+				2A34DCA6093837ACABC7C753D2F0CBCE /* SLPanGestureControl.m in Sources */,
+				85D241632ACB98289EA5641DB6BDAE39 /* SLPopInteractiveTransition.m in Sources */,
+				6E354270AA5CF68BDF083149BECDA66A /* SLPopTransition.m in Sources */,
+				97FA27CAF6A33B9EF46AF29B2E63BEC3 /* SLPushInteractiveTransition.m in Sources */,
+				DB8D1BCDAE08B03278BFC46B0CDBA30D /* SLPushTransition.m in Sources */,
+				2759159807428C1747FBE8905C1CE838 /* SLTransitionAnimator.m in Sources */,
+				015E16281040154EF7ED5B8114F87661 /* SLTransitioning-dummy.m in Sources */,
+				EC5689C4E754EEFA39D3B566FDD6105F /* UIView+SLTransitioning.m in Sources */,
+				ED04672BBEE013EA7D673D8F4E94478B /* UIViewController+SLTransitioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,69 +530,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B409C62E76F45534521B8D2B99F19CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B212CC99A5B2687672744D8FAEAAC453 /* SLTransitioning.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SLTransitioning/SLTransitioning-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SLTransitioning/SLTransitioning-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SLTransitioning/SLTransitioning.modulemap";
-				PRODUCT_MODULE_NAME = SLTransitioning;
-				PRODUCT_NAME = SLTransitioning;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0EC0FE215696AD098085812A7EA425B9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B368052D1A5FF02C5374C504E733315 /* SLTransitioning.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SLTransitioning/SLTransitioning-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SLTransitioning/SLTransitioning-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SLTransitioning/SLTransitioning.modulemap";
-				PRODUCT_MODULE_NAME = SLTransitioning;
-				PRODUCT_NAME = SLTransitioning;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		288CE07505C77C2547FC5EE9369B2E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EF1BE208F0BA4327FCB56E833AB94B2 /* Pods-SLTransitioning_Tests.debug.xcconfig */;
@@ -601,7 +546,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SLTransitioning_Tests/Pods-SLTransitioning_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SLTransitioning_Tests/Pods-SLTransitioning_Tests.modulemap";
@@ -634,7 +579,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SLTransitioning_Tests/Pods-SLTransitioning_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SLTransitioning_Tests/Pods-SLTransitioning_Tests.modulemap";
@@ -668,7 +613,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SLTransitioning_Example/Pods-SLTransitioning_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SLTransitioning_Example/Pods-SLTransitioning_Example.modulemap";
@@ -679,6 +624,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48A67917C973BEC3E2A81563D40EAC9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45608DDBF2F611CBB910BC23CF89339E /* SLTransitioning.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SLTransitioning/SLTransitioning-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SLTransitioning/SLTransitioning-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SLTransitioning/SLTransitioning.modulemap";
+				PRODUCT_MODULE_NAME = SLTransitioning;
+				PRODUCT_NAME = SLTransitioning;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -712,6 +689,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -734,13 +712,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -772,6 +749,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -797,7 +775,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -826,7 +804,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SLTransitioning_Example/Pods-SLTransitioning_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SLTransitioning_Example/Pods-SLTransitioning_Example.modulemap";
@@ -837,6 +815,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E282868BF853E8156E3814F3914AD0BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D5620C48FA884DF8251B3DB6FA6479A /* SLTransitioning.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SLTransitioning/SLTransitioning-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SLTransitioning/SLTransitioning-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SLTransitioning/SLTransitioning.modulemap";
+				PRODUCT_MODULE_NAME = SLTransitioning;
+				PRODUCT_NAME = SLTransitioning;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -873,11 +882,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA5789E9948E3C46F20ECF47F8F5655E /* Build configuration list for PBXNativeTarget "SLTransitioning" */ = {
+		F2E41DBB93EA7725BF401FB8A2793819 /* Build configuration list for PBXNativeTarget "SLTransitioning" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B409C62E76F45534521B8D2B99F19CA /* Debug */,
-				0EC0FE215696AD098085812A7EA425B9 /* Release */,
+				E282868BF853E8156E3814F3914AD0BE /* Debug */,
+				48A67917C973BEC3E2A81563D40EAC9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

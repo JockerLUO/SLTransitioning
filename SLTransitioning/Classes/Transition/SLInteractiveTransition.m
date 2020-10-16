@@ -24,13 +24,15 @@
 @synthesize hidenTabbarVC;
 @synthesize showTabbarVC;
 @synthesize tabBarSnapshot;
-
+@synthesize callback;
+@synthesize maskView;
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         self.model = [SLInteractiveTransitionModel new];
+        self.callback = [SLAnimationCallbackModel new];
     }
     return self;
 }
@@ -40,15 +42,14 @@
     self.panGestureControl = [SLPanGestureControl new];
     [self.panGestureControl addPanGestureToView:self.weakVC.view];
     self.panGestureControl.delegate = self;
-//    self.model = [SLInteractiveTransitionModel new];
 }
 
 #pragma mark - SLPanGestureControlDelegate
 - (BOOL)sl_panGestureBegin:(nonnull UIPanGestureRecognizer *)gesture
                  direction:(SLPanDirectionType)direction {
     BOOL res = NO;
-    if (self.model.transitionDirectionBlock) {
-        res = self.model.transitionDirectionBlock(direction);
+    if (self.callback.transitionDirectionBlock) {
+        res = self.callback.transitionDirectionBlock(direction);
     }
     return res;
 }
@@ -85,15 +86,15 @@
 }
 
 - (BOOL)sl_gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    if (self.model.gestureRecognizerShouldBegin) {
-        return self.model.gestureRecognizerShouldBegin(gestureRecognizer);
+    if (self.callback.gestureRecognizerShouldBegin) {
+        return self.callback.gestureRecognizerShouldBegin(gestureRecognizer);
     }
     return YES;
 }
 
 - (BOOL)sl_panGestureRecognizer:(nonnull UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(nonnull UIGestureRecognizer *)otherGestureRecognizer {
-    if (self.model.recognizeSimultaneouslyBlock) {
-        return self.model.recognizeSimultaneouslyBlock(gestureRecognizer, otherGestureRecognizer);
+    if (self.callback.recognizeSimultaneouslyBlock) {
+        return self.callback.recognizeSimultaneouslyBlock(gestureRecognizer, otherGestureRecognizer);
     }
     return NO;
 }
@@ -111,18 +112,19 @@
             [self finishInteractiveTransition];
             [UIView animateWithDuration:self.model.animatedDuration animations:^{
                 [self updateTransform:1];
-                if (self.model.interactiveEnd) {
-                    self.model.interactiveEnd(self.transitionContext);
+                if (self.callback.interactiveEnd) {
+                    self.callback.interactiveEnd(self.transitionContext);
                 }
             } completion:^(BOOL finished) {
                 if (self.tabBarAnimting && self.showTabbarVC == self.toViewController) {
                     UITabBar *tabBar = self.showTabbarVC.tabBarController.tabBar;
                     tabBar.hidden = NO;
                 }
+                [self finishMaskViewAnimation:YES];
                 [self transitionEnd];
                 [self.transitionContext completeTransition:YES];
-                if (self.model.interactiveCompletion) {
-                    self.model.interactiveCompletion(YES);
+                if (self.callback.interactiveCompletion) {
+                    self.callback.interactiveCompletion(YES);
                 }
             }];
         });
@@ -134,10 +136,11 @@
 - (void)beginAnimate {
     [self.containerView addSubview:self.fromView];
     [self.containerView addSubview:self.toView];
+    [self configMaskViewAnimation];
     [self updateTransform:0];
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.model.interactiveBegin) {
-            self.model.interactiveBegin(self.transitionContext);
+        if (self.callback.interactiveBegin) {
+            self.callback.interactiveBegin(self.transitionContext);
         }
     });
 }
@@ -145,8 +148,8 @@
 - (void)updateInteractiveTransition {
     if (!self.isStartTransition) return;
     [self updateTransform:self.percent];
-    if (self.model.interactiveChange) {
-        self.model.interactiveChange(self.transitionContext, self.percent);
+    if (self.callback.interactiveChange) {
+        self.callback.interactiveChange(self.transitionContext, self.percent);
     }
     CGFloat percentComplete = self.percent * self.model.animatedScale;
     [self updateInteractiveTransition:percentComplete];
@@ -160,11 +163,15 @@
                 UITabBar *tabBar = self.showTabbarVC.tabBarController.tabBar;
                 tabBar.hidden = NO;
             }
+            [self finishMaskViewAnimation:isFinish];
             [self transitionEnd];
+            if (self.model.isMaskAnimted && self.callback.completedMaskView) {
+                self.callback.completedMaskView(self.maskView, isFinish);
+            }
             [self.transitionContext completeTransition:YES];
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (self.model.interactiveCompletion) {
-                    self.model.interactiveCompletion(YES);
+                if (self.callback.interactiveCompletion) {
+                    self.callback.interactiveCompletion(YES);
                 }
             });
         }];
@@ -175,11 +182,12 @@
                 UITabBar *tabBar = self.showTabbarVC.tabBarController.tabBar;
                 tabBar.hidden = NO;
             }
+            [self finishMaskViewAnimation:isFinish];
             [self transitionEnd];
             [self.transitionContext completeTransition:NO];
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (self.model.interactiveCompletion) {
-                    self.model.interactiveCompletion(NO);
+                if (self.callback.interactiveCompletion) {
+                    self.callback.interactiveCompletion(NO);
                 }
             });
         }];
@@ -191,8 +199,8 @@
     self.isStartTransition = NO;
     [UIView animateWithDuration:self.model.finishAnimatedDuration animations:^{
         [self updateTransform:1];
-        if (self.model.interactiveEnd) {
-            self.model.interactiveEnd(self.transitionContext);
+        if (self.callback.interactiveEnd) {
+            self.callback.interactiveEnd(self.transitionContext);
         }
     } completion:completion];
 }
@@ -202,8 +210,8 @@
     self.isStartTransition = NO;
     [UIView animateWithDuration:self.model.cancelAnimatedDuration animations:^{
         [self updateTransform:0];
-        if (self.model.interactiveCancel) {
-            self.model.interactiveCancel(self.transitionContext);
+        if (self.callback.interactiveCancel) {
+            self.callback.interactiveCancel(self.transitionContext);
         }
     } completion:completion];
 }
@@ -261,6 +269,16 @@
         case SLPanDirectionTypeUnknow: {
             
         } break;
+    }
+    
+    if (self.model.isMaskAnimted) {
+        CGFloat alpha = 0;
+        if (self.model.maskAnimtedScale > 0) {
+            alpha = percent * self.model.maskAnimtedScale;
+        } else if (self.model.maskAnimtedScale < 0) {
+            alpha = 1 + percent * self.model.maskAnimtedScale;
+        }
+        self.maskView.alpha = alpha;
     }
 }
 #pragma mark - tabBarAnimation
@@ -325,6 +343,31 @@
         tabBar.frame = CGRectMake(0, CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), CGRectGetHeight(tabBar.frame));
     });
     self.tabBarAnimting = NO;
+}
+
+#pragma mark - maskView
+
+- (void)configMaskViewAnimation {
+    if (self.model.isMaskAnimted) {
+        UIView *maskView = [self.containerView viewWithTag:self.model.maskViewTag];
+        if (maskView == nil) {
+            maskView = [UIView new];
+            maskView.tag = self.model.maskViewTag;
+        }
+        if (self.callback.configMaskView) {
+            self.callback.configMaskView(maskView);
+        }
+        [self.containerView addSubview:maskView];
+        maskView.frame = CGRectMake(0, 0, self.containerView.sl_width, self.containerView.sl_height);
+        self.maskView = maskView;
+    }
+}
+
+- (void)finishMaskViewAnimation:(BOOL)flag {
+    if (self.model.isMaskAnimted && self.callback.completedMaskView) {
+        self.callback.completedMaskView(self.maskView, flag);
+        self.maskView = nil;
+    }
 }
 
 #pragma mark - getter

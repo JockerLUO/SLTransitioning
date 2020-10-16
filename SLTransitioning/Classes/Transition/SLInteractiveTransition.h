@@ -10,12 +10,14 @@
 #import "UIView+SLTransitioning.h"
 #import "SLPanGestureControl.h"
 #import "SLInteractiveTransitionModel.h"
+#import "SLAnimationCallbackModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol SLInteractiveTransitionProtocol <NSObject>
 
 @property (nonatomic, strong) SLInteractiveTransitionModel *model;
+@property (nonatomic, strong) SLAnimationCallbackModel *callback;
 
 @property (nonatomic, weak) UIViewController *weakVC;
 @property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
@@ -51,6 +53,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) UIView *tabBarSnapshot;
 @property (nonatomic, weak) UIViewController *showTabbarVC;
 @property (nonatomic, weak) UIViewController *hidenTabbarVC;
+
+@property (nonatomic, weak) UIView *maskView;
 
 @end
 

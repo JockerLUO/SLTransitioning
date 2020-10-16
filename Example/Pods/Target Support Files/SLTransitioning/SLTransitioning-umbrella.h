@@ -15,6 +15,7 @@
 #import "SLPushInteractiveTransition.h"
 #import "SLPushTransition.h"
 #import "SLTransitioning.h"
+#import "SLAnimationCallbackModel.h"
 #import "SLInteractiveTransition.h"
 #import "SLInteractiveTransitionModel.h"
 #import "SLTransitionAnimator.h"

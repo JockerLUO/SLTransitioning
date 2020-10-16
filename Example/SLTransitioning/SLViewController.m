@@ -34,9 +34,8 @@
     self.pushDownBtn = [self creatPushButton:SLPanDirectionTypeDown];
     self.pushLeftBtn = [self creatPushButton:SLPanDirectionTypeLeft];
     self.pushRightBtn = [self creatPushButton:SLPanDirectionTypeRight];
-    
     self.transitionAnimator = [SLTransitionAnimator new];
-    self.transitionAnimator.pushInteractiveTransition.model.disablePanGesture = YES;
+    
 
      [self sl_registerPushTransition:^UIViewController * _Nullable(SLPanDirectionType pushDirection) {
         UIViewController *vc = nil;
@@ -102,7 +101,17 @@
     if (direction != SLPanDirectionTypeUnknow) {
         self.transitioningDelegate = self.transitionAnimator;
         self.navigationController.delegate = self.transitionAnimator;
-        self.transitionAnimator.pushInteractiveTransition.model.animatedDirection = direction;
+        SLInteractiveTransitionModel *model = self.transitionAnimator.pushInteractiveTransition.model;
+        model.animatedDirection = direction;
+        model.disablePanGesture = YES;
+        model.maskAnimted = YES;
+        model.maskAnimtedScale = 1;
+        SLAnimationCallbackModel *callback = self.transitionAnimator.pushInteractiveTransition.callback;
+        callback.configMaskView = ^(UIView * _Nonnull maskView) {
+            maskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        };
+        vc.sl_transitionAnimator.popInteractiveTransition.model.maskAnimted = YES;
+        vc.sl_transitionAnimator.popInteractiveTransition.model.maskAnimtedScale = -1;
     }
     [self.navigationController pushViewController:vc animated:YES];
 }

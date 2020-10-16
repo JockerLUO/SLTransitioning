@@ -14,17 +14,29 @@
 
 @implementation SLPopInteractiveTransition
 
-- (void)addPanGestureForViewController:(UIViewController *)viewController {
-    [super addPanGestureForViewController:viewController];
-    self.model.toViewAnimatedAreaScale = 0;
-    self.model.completedVelocity = 1000;
-    self.model.completedPercent = 0.4;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.model.toViewAnimatedAreaScale = 0;
+        self.model.completedVelocity = 1000;
+        self.model.completedPercent = 0.4;
+        self.callback.completedMaskView = ^(UIView * _Nonnull maskView, BOOL flag) {
+            if (flag) {
+                [maskView removeFromSuperview];
+            }
+        };
+    }
+    return self;
 }
 
 #pragma mark - SLInteractiveTransitionProtocol
 - (void)beginAnimate {
     [super beginAnimate];
     [self.containerView bringSubviewToFront:self.fromView];
+    if (self.model.isMaskAnimted) {
+        [self.containerView insertSubview:self.maskView belowSubview:self.fromView];
+    }
     [self tabBarSnapshotAnimation:self.toViewController
                     hidenTabbarVC:self.fromViewController
                    showTabbarView:self.toView];

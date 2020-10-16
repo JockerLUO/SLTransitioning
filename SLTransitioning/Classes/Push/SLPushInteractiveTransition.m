@@ -14,17 +14,29 @@
 
 @implementation SLPushInteractiveTransition
 
-- (void)addPanGestureForViewController:(UIViewController *)viewController {
-    [super addPanGestureForViewController:viewController];
-    self.model.fromViewAnimatedScale = 0.3;
-    self.model.completedVelocity = 600;
-    self.model.completedPercent = 0.3;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.model.fromViewAnimatedScale = 0.3;
+        self.model.completedVelocity = 600;
+        self.model.completedPercent = 0.3;
+        self.callback.completedMaskView = ^(UIView * _Nonnull maskView, BOOL flag) {
+            if (!flag) {
+                [maskView removeFromSuperview];
+            }
+        };
+    }
+    return self;
 }
 
 #pragma mark - SLInteractiveTransitionProtocol
 - (void)beginAnimate {
     [super beginAnimate];
     [self.containerView bringSubviewToFront:self.toView];
+    if (self.model.isMaskAnimted) {
+        [self.containerView insertSubview:self.maskView belowSubview:self.toView];
+    }
     [self tabBarSnapshotAnimation:self.fromViewController
                     hidenTabbarVC:self.toViewController
                    showTabbarView:self.fromView];

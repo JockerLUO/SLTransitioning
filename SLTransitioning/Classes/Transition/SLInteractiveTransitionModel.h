@@ -27,24 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 ///转场中toView动画的可移动范围比例,
 @property (nonatomic, assign) CGFloat fromViewAnimatedAreaScale;
 
-///是否开始动画
-@property (nonatomic, copy) BOOL(^ transitionDirectionBlock)(SLPanDirectionType direction);
-///开始转场
-@property (nonatomic, copy) void(^ interactiveBegin)(id<UIViewControllerContextTransitioning> transitionContext);
-///转场中
-@property (nonatomic, copy) void(^ interactiveChange)(id<UIViewControllerContextTransitioning> transitionContext, CGFloat percent);
-///转场结束,动画中
-@property (nonatomic, copy) void(^ interactiveEnd)(id<UIViewControllerContextTransitioning> transitionContext);
-///转场取消,动画中
-@property (nonatomic, copy) void(^ interactiveCancel)(id<UIViewControllerContextTransitioning> transitionContext);
-///转场结果
-@property (nonatomic, copy) void(^ interactiveCompletion)(BOOL flag);
-
-///手势共存
-@property (nonatomic, copy) BOOL(^ recognizeSimultaneouslyBlock)(UIGestureRecognizer *gestureRecognizer, UIGestureRecognizer *otherGestureRecognizer);
-///手势开始
-@property (nonatomic, copy) BOOL(^ gestureRecognizerShouldBegin)(UIGestureRecognizer *gestureRecognizer);
-
 ///禁用平移手势,使用动画直接转场
 @property (nonatomic, assign, getter=isDisablePanGesture) BOOL disablePanGesture;
 ///转场动画方向
@@ -57,9 +39,15 @@ NS_ASSUME_NONNULL_BEGIN
 ///取消转场动画时间
 @property (nonatomic, assign) CGFloat cancelAnimatedDuration;
 
-
 ///是否有tabBar动画
 @property (nonatomic, assign, getter=isTabBarAnimted) BOOL tabBarAnimted;
+
+///遮罩动画
+@property (nonatomic, assign, getter=isMaskAnimted) BOOL maskAnimted;
+///遮罩动画透明度变化比例,正为由浅到深,负为由深到浅
+@property (nonatomic, assign) CGFloat maskAnimtedScale;
+///遮罩的tag,用于获取已有的遮罩,如果需要在不同页面有不同的遮罩,可以设置不一样的tag
+@property (nonatomic, assign) NSInteger maskViewTag;
 
 @end
 

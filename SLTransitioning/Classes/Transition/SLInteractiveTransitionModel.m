@@ -27,6 +27,8 @@
         self.animatedDirection = SLPanDirectionTypeLeft;
         
         self.tabBarAnimted = YES;
+        
+        self.maskViewTag = 1873952;
     }
     return self;
 }
