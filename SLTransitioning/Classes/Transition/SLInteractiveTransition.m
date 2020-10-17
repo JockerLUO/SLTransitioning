@@ -20,7 +20,6 @@
 @synthesize percent;
 @synthesize tabBarAnimting;
 @synthesize transitionContext;
-@synthesize weakVC;
 @synthesize hidenTabbarVC;
 @synthesize showTabbarVC;
 @synthesize tabBarSnapshot;
@@ -38,9 +37,8 @@
 }
 
 - (void)addPanGestureForViewController:(UIViewController *)viewController {
-    self.weakVC = viewController;
     self.panGestureControl = [SLPanGestureControl new];
-    [self.panGestureControl addPanGestureToView:self.weakVC.view];
+    [self.panGestureControl addPanGestureToView:viewController.view];
     self.panGestureControl.delegate = self;
 }
 
@@ -219,10 +217,11 @@
 - (void)transitionEnd {
     self.isStartTransition = NO;
     [self tabBarSnapshotAnimationEnd];
+    UIViewController *fromViewController = self.fromViewController;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.transitionContext = nil;
-        self.weakVC.transitioningDelegate = nil;
-        self.weakVC.navigationController.delegate = nil;
+        fromViewController.transitioningDelegate = nil;
+        fromViewController.navigationController.delegate = nil;
     });
 }
 

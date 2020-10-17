@@ -36,8 +36,7 @@
     self.pushRightBtn = [self creatPushButton:SLPanDirectionTypeRight];
     self.transitionAnimator = [SLTransitionAnimator new];
     
-
-     [self sl_registerPushTransition:^UIViewController * _Nullable(SLPanDirectionType pushDirection) {
+    [self sl_registerPushTransition:^UIViewController * _Nullable(SLPanDirectionType pushDirection) {
         UIViewController *vc = nil;
          if (pushDirection != SLPanDirectionTypeUnknow) {
              SLPopViewController *pushVC = [SLPopViewController new];

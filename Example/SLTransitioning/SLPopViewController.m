@@ -11,6 +11,7 @@
 @interface SLPopViewController ()
 
 @property (nonatomic, strong) UIButton *popBtn;
+@property (nonatomic, strong) UIButton *pushBtn;
 @property (nonatomic, strong) SLTransitionAnimator *transitionAnimator;
 
 @end
@@ -60,9 +61,19 @@
     [self.popBtn setTitle:@"pop" forState:UIControlStateNormal];
     self.popBtn.frame = CGRectMake(0, 0, 100, 40);
     self.popBtn.center = self.view.center;
+    self.popBtn.sl_centerY = self.popBtn.sl_centerY * 0.7;
     self.popBtn.backgroundColor = UIColor.orangeColor;
     [self.popBtn addTarget:self action:@selector(popAction:) forControlEvents:UIControlEventTouchUpInside];
     
+    self.pushBtn = [UIButton new];
+    [self.view addSubview:self.pushBtn];
+    [self.pushBtn setTitle:@"push" forState:UIControlStateNormal];
+    self.pushBtn.frame = CGRectMake(0, 0, 100, 40);
+    self.pushBtn.center = self.view.center;
+    self.pushBtn.sl_centerY = self.pushBtn.sl_centerY * 1.3;
+    self.pushBtn.backgroundColor = UIColor.orangeColor;
+    [self.pushBtn addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
+
     __weak typeof(self) wSelf = self;
     [self sl_registerPopTransition:^BOOL(SLPanDirectionType popDirection) {
         __strong typeof(wSelf) self = wSelf;
@@ -76,7 +87,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setNavigationBarHidden:self.sourceDirection != SLPanDirectionTypeUnknow animated:animated];
 }
 
 - (void)popAction:(UIButton *)btn {
@@ -87,6 +98,10 @@
         self.transitionAnimator.popInteractiveTransition.model.animatedDirection = self.popDirection;
     }
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)pushAction:(UIButton *)btn {
+    [self.navigationController pushViewController:[SLPopViewController new] animated:YES];
 }
 
 @end

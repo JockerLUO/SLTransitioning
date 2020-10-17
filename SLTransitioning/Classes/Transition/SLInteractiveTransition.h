@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) SLInteractiveTransitionModel *model;
 @property (nonatomic, strong) SLAnimationCallbackModel *callback;
 
-@property (nonatomic, weak) UIViewController *weakVC;
 @property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
 
 ///转场进度
