@@ -66,10 +66,26 @@
 
 - (void)sl_panGestureEnd:(nonnull UIPanGestureRecognizer *)gesture
              offsetPoint:(CGPoint)offsetPoint {
-    CGPoint velocity = [gesture velocityInView:gesture.view];
-    
-    BOOL velocityArrive = ABS(velocity.x) > self.model.completedVelocity;
-    BOOL distanceArrive = ABS(self.percent) > self.model.completedPercent;
+    CGPoint velocity = [gesture velocityInView:gesture.view.window];
+    CGFloat gesVelocity = 0;
+    switch (self.currentDirection) {
+        case SLPanDirectionTypeUp:
+            gesVelocity = -velocity.y;
+            break;
+        case SLPanDirectionTypeLeft:
+            gesVelocity = -velocity.x;
+            break;
+        case SLPanDirectionTypeDown:
+            gesVelocity = velocity.y;
+            break;
+        case SLPanDirectionTypeRight:
+            gesVelocity = velocity.x;
+            break;
+        default:
+            break;
+    }    
+    BOOL velocityArrive = gesVelocity > self.model.completedVelocity;
+    BOOL distanceArrive = self.percent > self.model.completedPercent;
     
     BOOL shouldTransit = distanceArrive || velocityArrive;
     if (self.isStartTransition) {

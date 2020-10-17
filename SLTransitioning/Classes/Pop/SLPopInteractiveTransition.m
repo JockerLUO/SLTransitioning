@@ -19,7 +19,6 @@
     self = [super init];
     if (self) {
         self.model.toViewAnimatedAreaScale = 0;
-        self.model.completedVelocity = 1000;
         self.model.completedPercent = 0.4;
         self.callback.completedMaskView = ^(UIView * _Nonnull maskView, BOOL flag) {
             if (flag) {

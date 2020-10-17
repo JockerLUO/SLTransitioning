@@ -14,6 +14,9 @@
 {
     self = [super init];
     if (self) {
+        self.completedPercent = 0.5;
+        self.completedVelocity = 1000;
+        
         self.animatedScale = 1;
         self.toViewAnimatedScale = 1;
         self.toViewAnimatedAreaScale = 1;

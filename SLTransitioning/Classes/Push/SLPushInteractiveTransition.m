@@ -19,7 +19,6 @@
     self = [super init];
     if (self) {
         self.model.fromViewAnimatedScale = 0.3;
-        self.model.completedVelocity = 600;
         self.model.completedPercent = 0.3;
         self.callback.completedMaskView = ^(UIView * _Nonnull maskView, BOOL flag) {
             if (!flag) {
