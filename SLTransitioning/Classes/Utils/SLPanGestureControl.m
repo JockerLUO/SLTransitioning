@@ -28,6 +28,15 @@
     [self.panGes.view removeGestureRecognizer:self.panGes];
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.triggerDistance = 5;
+    }
+    return self;
+}
+
 - (void)addPanGestureToView:(UIView *)view {
     UIPanGestureRecognizer
         *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(respondsToPan:)];
@@ -61,7 +70,7 @@
 
         } else {
 
-            CGFloat triggerDistance = 20;
+            CGFloat triggerDistance = self.triggerDistance;
             CGPoint offsetPoint = [pan translationInView:pan.view];
             CGFloat distanceOffset = hypotf(offsetPoint.x, offsetPoint.y);
 

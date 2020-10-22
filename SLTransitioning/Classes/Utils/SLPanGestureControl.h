@@ -47,8 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addPanGestureToView:(UIView *)view;
 @property (weak, nonatomic) id<SLPanGestureControlDelegate> delegate;
 @property (nonatomic, assign, readonly) BOOL interacting;
-
 @property (nonatomic, assign, readonly) SLPanDirectionType currentDirection;
+@property (nonatomic, assign) CGFloat triggerDistance;
 
 @end
 
