@@ -148,9 +148,16 @@
 
 #pragma mark - SLInteractiveTransitionProtocol
 - (void)beginAnimate {
-    [self.containerView addSubview:self.fromView];
-    [self.containerView addSubview:self.toView];
     [self configMaskViewAnimation];
+    if (self.callback.configContainerView) {
+        NSArray <UIView *>*subViews = self.callback.configContainerView(self.fromView, self.toView, self.maskView);
+        for (UIView *subView in subViews) {
+            [self.containerView addSubview:subView];
+        }
+    } else {
+        [self.containerView addSubview:self.fromView];
+        [self.containerView addSubview:self.toView];
+    }
     [self updateTransform:0];
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.callback.interactiveBegin) {
@@ -247,8 +254,13 @@
     UIView *fromView = self.fromView;
     UIView *toView = self.toView;
     CGFloat fromViewPercent = percent * self.model.fromViewAnimatedScale;
+    fromViewPercent = MAX(fromViewPercent, 0);
+    fromViewPercent = MIN(fromViewPercent, 1);
+
     CGFloat toViewPercent = (1 - percent * self.model.toViewAnimatedScale);
-        
+    toViewPercent = MAX(toViewPercent, 0);
+    toViewPercent = MIN(toViewPercent, 1);
+
     CGFloat toViewAnimatedArea = 0;
     CGFloat fromViewAnimatedArea = 0;
     if (direction == SLPanDirectionTypeUp || direction == SLPanDirectionTypeDown) {
@@ -368,6 +380,8 @@
         if (maskView == nil) {
             maskView = [UIView new];
             maskView.tag = self.model.maskViewTag;
+        } else {
+            [maskView removeFromSuperview];
         }
         if (self.callback.configMaskView) {
             self.callback.configMaskView(maskView);

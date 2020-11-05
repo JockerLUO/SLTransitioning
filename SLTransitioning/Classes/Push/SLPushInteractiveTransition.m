@@ -25,6 +25,13 @@
                 [maskView removeFromSuperview];
             }
         };
+        self.callback.configContainerView = ^NSArray * _Nonnull(UIView * _Nonnull fromView, UIView * _Nonnull toView, UIView * _Nullable maskView) {
+            if (maskView != nil) {
+                return @[fromView, maskView, toView];
+            } else {
+                return @[fromView, toView];
+            }
+        };
     }
     return self;
 }
@@ -32,10 +39,6 @@
 #pragma mark - SLInteractiveTransitionProtocol
 - (void)beginAnimate {
     [super beginAnimate];
-    [self.containerView bringSubviewToFront:self.toView];
-    if (self.model.isMaskAnimted) {
-        [self.containerView insertSubview:self.maskView belowSubview:self.toView];
-    }
     [self tabBarSnapshotAnimation:self.fromViewController
                     hidenTabbarVC:self.toViewController
                    showTabbarView:self.fromView];

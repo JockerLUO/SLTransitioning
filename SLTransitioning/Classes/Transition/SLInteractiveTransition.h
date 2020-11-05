@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIViewController *showTabbarVC;
 @property (nonatomic, weak) UIViewController *hidenTabbarVC;
 
-@property (nonatomic, weak) UIView *maskView;
+@property (nonatomic, strong, nullable) UIView *maskView;
 
 @end
 

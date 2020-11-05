@@ -28,6 +28,8 @@
 @implementation SLViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
     
     self.pushBtn = [self creatPushButton:SLPanDirectionTypeUnknow];
     self.pushUpBtn = [self creatPushButton:SLPanDirectionTypeUp];

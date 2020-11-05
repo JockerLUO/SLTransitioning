@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) SLPanDirectionType sourceDirection;
 @property (nonatomic, assign) SLPanDirectionType popDirection;
+@property (nonatomic, assign) CGFloat backViewAlpha;
 
 @end
 

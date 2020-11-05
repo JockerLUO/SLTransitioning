@@ -27,6 +27,7 @@
         model.disablePanGesture = YES;
         model.maskAnimted = YES;
         model.maskAnimtedScale = -1;
+        self.backViewAlpha = 1;
     }
     return self;
 }
@@ -36,23 +37,23 @@
     self.title = @(self.sourceDirection).stringValue;
     switch (self.sourceDirection) {
         case SLPanDirectionTypeUp: {
-            self.view.backgroundColor = UIColor.redColor;
+            self.view.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:self.backViewAlpha];
             self.popDirection = SLPanDirectionTypeDown;
         } break;
         case SLPanDirectionTypeLeft: {
-            self.view.backgroundColor = UIColor.yellowColor;
+            self.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:self.backViewAlpha];
             self.popDirection = SLPanDirectionTypeRight;
         } break;
         case SLPanDirectionTypeDown: {
-            self.view.backgroundColor = UIColor.blueColor;
+            self.view.backgroundColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:self.backViewAlpha];
             self.popDirection = SLPanDirectionTypeUp;
         } break;
         case SLPanDirectionTypeRight: {
-            self.view.backgroundColor = UIColor.greenColor;
+            self.view.backgroundColor = [UIColor colorWithRed:1 green:0 blue:1 alpha:self.backViewAlpha];
             self.popDirection = SLPanDirectionTypeLeft;
         } break;
         case SLPanDirectionTypeUnknow: {
-            self.view.backgroundColor = UIColor.whiteColor;
+            self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:self.backViewAlpha];
         } break;
     }
     
