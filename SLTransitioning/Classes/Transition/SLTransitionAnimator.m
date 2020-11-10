@@ -10,6 +10,8 @@
 
 @interface SLTransitionAnimator()
 
+@property (nonatomic, assign, getter=isHang) BOOL hang;
+
 @end
 
 @implementation SLTransitionAnimator
@@ -19,8 +21,37 @@
     if (self) {
         self.pushTransition = [SLPushTransition new];
         self.pushInteractiveTransition = [SLPushInteractiveTransition new];
+        
         self.popTransition = [SLPopTransition new];
         self.popInteractiveTransition = [SLPopInteractiveTransition new];
+        
+        __weak typeof(self) wSelf = self;
+        SLAnimationCallbackModel *pushCallbackModel = self.pushInteractiveTransition.callback;
+        pushCallbackModel.gestureRecognizerShouldBegin = ^BOOL(UIGestureRecognizer * _Nonnull gestureRecognizer) {
+            __strong typeof(wSelf) self = wSelf;
+            return self.isHang == NO;
+        };
+        pushCallbackModel.interactiveDidCancel = ^(id<UIViewControllerContextTransitioning>  _Nonnull transitionContext) {
+            __strong typeof(wSelf) self = wSelf;
+            self.hang = YES;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.hang = NO;
+            });
+        };
+        
+        SLAnimationCallbackModel *popCallbackModel = self.popInteractiveTransition.callback;
+        popCallbackModel.gestureRecognizerShouldBegin = ^BOOL(UIGestureRecognizer * _Nonnull gestureRecognizer) {
+            __strong typeof(wSelf) self = wSelf;
+            return self.isHang == NO;
+        };
+        popCallbackModel.interactiveDidCancel = ^(id<UIViewControllerContextTransitioning>  _Nonnull transitionContext) {
+            __strong typeof(wSelf) self = wSelf;
+            self.hang = YES;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.hang = NO;
+            });
+        };
+
     }
     return self;
 }

@@ -126,10 +126,13 @@
             [self finishInteractiveTransition];
             [UIView animateWithDuration:self.model.animatedDuration animations:^{
                 [self updateTransform:1];
-                if (self.callback.interactiveEnd) {
-                    self.callback.interactiveEnd(self.transitionContext);
+                if (self.callback.interactiveWillEnd) {
+                    self.callback.interactiveWillEnd(self.transitionContext);
                 }
             } completion:^(BOOL finished) {
+                if (self.callback.interactiveDidEnd) {
+                    self.callback.interactiveDidEnd(self.transitionContext);
+                }
                 if (self.tabBarAnimting && self.showTabbarVC == self.toViewController) {
                     UITabBar *tabBar = self.showTabbarVC.tabBarController.tabBar;
                     tabBar.hidden = NO;
@@ -225,10 +228,15 @@
 
     [UIView animateWithDuration:self.model.finishAnimatedDuration animations:^{
         [self updateTransform:1];
-        if (self.callback.interactiveEnd) {
-            self.callback.interactiveEnd(self.transitionContext);
+        if (self.callback.interactiveWillEnd) {
+            self.callback.interactiveWillEnd(self.transitionContext);
         }
-    } completion:completion];
+    } completion:^(BOOL finished) {
+        if (self.callback.interactiveDidEnd) {
+            self.callback.interactiveDidEnd(self.transitionContext);
+        }
+        completion(finished);
+    }];
 }
 
 - (void)cancelAnimate:(void (^ __nullable)(BOOL finished))completion {
@@ -241,10 +249,15 @@
     
     [UIView animateWithDuration:duration animations:^{
         [self updateTransform:0];
-        if (self.callback.interactiveCancel) {
-            self.callback.interactiveCancel(self.transitionContext);
+        if (self.callback.interactiveWillCancel) {
+            self.callback.interactiveWillCancel(self.transitionContext);
         }
-    } completion:completion];
+    } completion:^(BOOL finished) {
+        if (self.callback.interactiveDidCancel) {
+            self.callback.interactiveDidCancel(self.transitionContext);
+        }
+        completion(finished);
+    }];
 }
 
 - (void)transitionEnd {

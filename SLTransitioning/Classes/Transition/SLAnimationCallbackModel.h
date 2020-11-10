@@ -20,10 +20,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSArray *(^configContainerView)(UIView *fromView, UIView *toView, UIView *_Nullable maskView);
 ///转场中
 @property (nonatomic, copy, nullable) void(^ interactiveChange)(id<UIViewControllerContextTransitioning> transitionContext, CGFloat percent);
-///转场结束,动画中
-@property (nonatomic, copy, nullable) void(^ interactiveEnd)(id<UIViewControllerContextTransitioning> transitionContext);
-///转场取消,动画中
-@property (nonatomic, copy, nullable) void(^ interactiveCancel)(id<UIViewControllerContextTransitioning> transitionContext);
+
+///转场结束,动画中,可用于添加动画效果
+@property (nonatomic, copy, nullable) void(^ interactiveWillEnd)(id<UIViewControllerContextTransitioning> transitionContext);
+///转场结束,动画结束
+@property (nonatomic, copy, nullable) void(^ interactiveDidEnd)(id<UIViewControllerContextTransitioning> transitionContext);
+
+///转场取消,动画中,可用于添加动画效果
+@property (nonatomic, copy, nullable) void(^ interactiveWillCancel)(id<UIViewControllerContextTransitioning> transitionContext);
+///转场结束,动画结束
+@property (nonatomic, copy, nullable) void(^ interactiveDidCancel)(id<UIViewControllerContextTransitioning> transitionContext);
+
 ///转场结果
 @property (nonatomic, copy, nullable) void(^ interactiveCompletion)(BOOL flag);
 
