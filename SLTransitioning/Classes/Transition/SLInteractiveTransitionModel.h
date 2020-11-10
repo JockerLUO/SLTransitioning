@@ -34,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///完整的转场动画时间
 @property (nonatomic, assign) CGFloat animatedDuration;
+
+///是否匀速结束动画,和 finishAnimatedDuration, cancelAnimatedDuration 冲突,默认NO, 
+///e.g. uniformSpeedFinishAnimation为YES animatedDuration 为1, completedPercent 为0.3,进度为0.4,转场动画时间为0.6,和 finishAnimatedDuration 无关
+@property (nonatomic, assign, getter=isUniformSpeed) BOOL uniformSpeedFinishAnimation;
+
 ///结束转场动画时间
 @property (nonatomic, assign) CGFloat finishAnimatedDuration;
 ///取消转场动画时间

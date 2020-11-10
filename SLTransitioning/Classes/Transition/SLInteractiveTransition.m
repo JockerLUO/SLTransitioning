@@ -218,6 +218,11 @@
 - (void)finishAnimate:(void (^ __nullable)(BOOL finished))completion {
     if (!self.isStartTransition) return;
     self.isStartTransition = NO;
+    NSTimeInterval duration = model.finishAnimatedDuration;
+    if (self.model.isUniformSpeed) {
+        duration = self.model.animatedDuration * (1 - self.percent);
+    }
+
     [UIView animateWithDuration:self.model.finishAnimatedDuration animations:^{
         [self updateTransform:1];
         if (self.callback.interactiveEnd) {
@@ -229,7 +234,12 @@
 - (void)cancelAnimate:(void (^ __nullable)(BOOL finished))completion {
     if (!self.isStartTransition) return;
     self.isStartTransition = NO;
-    [UIView animateWithDuration:self.model.cancelAnimatedDuration animations:^{
+    NSTimeInterval duration = model.cancelAnimatedDuration;
+    if (self.model.isUniformSpeed) {
+        duration = self.model.animatedDuration * self.percent;
+    }
+    
+    [UIView animateWithDuration:duration animations:^{
         [self updateTransform:0];
         if (self.callback.interactiveCancel) {
             self.callback.interactiveCancel(self.transitionContext);

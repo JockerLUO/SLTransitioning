@@ -34,6 +34,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    __weak typeof(self) wSelf = self;
+    [self sl_registerPopTransition:^BOOL(SLPanDirectionType popDirection) {
+        __strong typeof(wSelf) self = wSelf;
+        BOOL res = NO;
+        if (popDirection == self.popDirection) {
+            res = YES;
+        }
+        return res;
+    } completion:nil];
+    
+    SLInteractiveTransitionModel *model = self.sl_transitionAnimator.popInteractiveTransition.model;
+    SLAnimationCallbackModel *callback = self.sl_transitionAnimator.popInteractiveTransition.callback;
+
     self.title = @(self.sourceDirection).stringValue;
     switch (self.sourceDirection) {
         case SLPanDirectionTypeUp: {
@@ -51,6 +65,8 @@
         case SLPanDirectionTypeRight: {
             self.view.backgroundColor = [UIColor colorWithRed:1 green:0 blue:1 alpha:self.backViewAlpha];
             self.popDirection = SLPanDirectionTypeLeft;
+            model.animatedDuration = 3;
+            model.uniformSpeedFinishAnimation = YES;
         } break;
         case SLPanDirectionTypeUnknow: {
             self.view.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:self.backViewAlpha];
@@ -74,16 +90,6 @@
     self.pushBtn.sl_centerY = self.pushBtn.sl_centerY * 1.3;
     self.pushBtn.backgroundColor = UIColor.orangeColor;
     [self.pushBtn addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
-
-    __weak typeof(self) wSelf = self;
-    [self sl_registerPopTransition:^BOOL(SLPanDirectionType popDirection) {
-        __strong typeof(wSelf) self = wSelf;
-        BOOL res = NO;
-        if (popDirection == self.popDirection) {
-            res = YES;
-        }
-        return res;
-    } completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

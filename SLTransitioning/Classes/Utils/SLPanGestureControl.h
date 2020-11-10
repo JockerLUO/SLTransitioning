@@ -48,6 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) id<SLPanGestureControlDelegate> delegate;
 @property (nonatomic, assign, readonly) BOOL interacting;
 @property (nonatomic, assign, readonly) SLPanDirectionType currentDirection;
+///修改 triggerDistance 可以调整手势开始敏感度
 @property (nonatomic, assign) CGFloat triggerDistance;
 
 @end

@@ -28,15 +28,6 @@
     [self.panGes.view removeGestureRecognizer:self.panGes];
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.triggerDistance = 5;
-    }
-    return self;
-}
-
 - (void)addPanGestureToView:(UIView *)view {
     UIPanGestureRecognizer
         *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(respondsToPan:)];
