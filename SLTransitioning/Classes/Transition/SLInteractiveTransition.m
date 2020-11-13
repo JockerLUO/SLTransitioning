@@ -288,10 +288,10 @@
     CGFloat fromViewAnimatedArea = 0;
     if (direction == SLPanDirectionTypeUp || direction == SLPanDirectionTypeDown) {
         toViewAnimatedArea = toView.sl_height;
-        fromViewAnimatedArea = toView.sl_height;
+        fromViewAnimatedArea = fromView.sl_height;
     } else if (direction == SLPanDirectionTypeLeft || direction == SLPanDirectionTypeRight) {
         toViewAnimatedArea = toView.sl_width;
-        fromViewAnimatedArea = toView.sl_width;
+        fromViewAnimatedArea = fromView.sl_width;
     }
     toViewAnimatedArea *= self.model.toViewAnimatedAreaScale;
     fromViewAnimatedArea *= self.model.fromViewAnimatedAreaScale;
