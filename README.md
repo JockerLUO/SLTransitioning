@@ -7,8 +7,7 @@
 ## Example
 
 这是一个对转场动画进行封装的框架，可以快速便捷的自定义各种转场动画。
-#####通过手势转场
-
+##### 通过手势转场
 ```
 [self sl_registerPushTransition:^UIViewController * _Nullable(SLPanDirectionType pushDirection) {
     UIViewController *vc = nil;
@@ -27,7 +26,7 @@
 }];
 ```
 
-#####自定义转场方向
+##### 自定义转场方向
 ```
 self.transitioningDelegate = self.transitionAnimator;
 self.navigationController.delegate = self.transitionAnimator;
@@ -36,6 +35,7 @@ model.animatedDirection = SLPanDirectionTypeLeft;
 [self.navigationController pushViewController:vc animated:YES];
 ```
 更多转场配置请参看 SLInteractiveTransitionModel.h
+转场方法回调以及自定义转场动画参考 SLAnimationCallbackModel.h
 
 ## Installation
 
