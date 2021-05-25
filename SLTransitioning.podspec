@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SLTransitioning'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'push pop interactive transition'
 
 # This description is used to generate tags and improve search results.
